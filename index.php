@@ -26,5 +26,5 @@ if(getenv('MOCK_JSON')) {
 $update = $telegram->getWebhookUpdates();
 $telegram->sendMessage([
     'chat_id' => $update->getChat()->getId(),
-    'text' => 'Este grupo foi movido, acesse @SegInfoBRasil'
+    'text' => 'Este grupo foi movido, acesse '.getenv('NEW_GROUP')
 ]);
